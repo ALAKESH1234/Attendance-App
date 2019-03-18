@@ -12,16 +12,11 @@
         <div class="col-lg-offset-1 col-lg-10">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">Register</div>
-                        <div class="panel-body">
+                    
                             <div class="row">
                                 <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
                                     <form name="teacher_register" action="actions/teacher_register_action.php" method="post" enctype="multipart/form-data">
 
-                                    <div>
-                                        <input type="file" name="profile">;
-                                    </div>
 
                                         <div class="form-group">
                                             <label>Name</label>
@@ -32,27 +27,41 @@
                                             <input type="email" class="form-control" name="email" placeholder="Your Email..">
                                         </div>
                                         <div class="form-group">
+                                            <label>Cno</label>
+                                            <input type="text" class="form-control" name="contactno" placeholder="Type contact number">
+                                        </div>
+                                        <div class="form-group">
+                                        <label>Department &nbsp;</label>
+                                        <select name="deptid" size="1">
+                                        <option value="cse">Computer Science</option>
+                                        <option value="ele">Electronics</option>
+                                         <option value="mat">Mathematics</option>
+                                        </select><br>
+                                        </div>
+                                        <div class="form-group">
                                             <label>Password</label>
                                             <input type="password" class="form-control" name="password" placeholder="Type Password">
                                         </div>
+                                        
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Confirm Password</label>
                                             <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
                                         </div>
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    
+                                        <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Register</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div>       
+        </div>       
+            
+        
+    
       </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Register</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
       </div>
     </div>
   </div>
