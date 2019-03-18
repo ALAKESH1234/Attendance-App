@@ -3,7 +3,7 @@
     <div class="modal-content">
      
       <div class="modal-body">
-      <div class="row">
+      <div class="row" id="row">
         <div class="col-lg-offset-1 col-lg-10">
             <div class="row">
                 <div class="col-lg-12">
