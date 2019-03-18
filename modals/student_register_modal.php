@@ -7,7 +7,7 @@
         <div class="col-lg-offset-1 col-lg-10">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="panel panel-primary">
+                    <div class="panel nhgghghhhpanel-primary">
                         <div class="panel-heading">Student Register</div>
                         <div class="panel-body">
                             <div class="row">
