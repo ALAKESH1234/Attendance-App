@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
 
                 //if role is admin redirect to admin home
-                header('location: ../admin_home.php');
+                header('location: ../index.php');
         }    
     }
 
