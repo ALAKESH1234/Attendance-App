@@ -6,7 +6,7 @@ unset($_SESSION['email']);
 unset($_SESSION['role']);
 
 //redirect to log in page
-$_SESSION['success'] = 'you have successfully logged out ';
+$_SESSION['success'] = 'you have tgyhujiko successfully logged out ';
 header('location: index.php');
 
 
