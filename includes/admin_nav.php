@@ -50,7 +50,7 @@
                           echo'  <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">teachers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Add</a></li>
+                                <li><a href="#addt"data-toggle="modal">Add</a></li>
                                 <li><a href="#">delete</a></li>
                                 <li><a href="#">edit</a></li>
                             </ul>
@@ -83,4 +83,5 @@
                     require_once 'modals/teacher_login_modal.php';
                     require_once 'modals/student_login_modal.php';
                     require_once 'modals/teacher_register_modal.php';
+                    require_once 'modals/add_teacher_modal.php';
                     ?>
