@@ -6,7 +6,7 @@ $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
     
     $_email = $_POST['email'];
-    $_password = 'xyz';
+    $_password = '';
     $_name = $_POST['name'];
     $_deptid = $_POST['deptid'];
     $_cno = $_POST['cno'];
@@ -18,7 +18,7 @@ print_r($sql);
     $result = $conn->query($sql);
 var_dump($result);
 if ($result!=0) {
-    $_SESSION['success']="successfully registered" ."<br>". "login please";
+    $_SESSION['success']="successfully add";
     header('location: ../index.php');
 }
 ?>
