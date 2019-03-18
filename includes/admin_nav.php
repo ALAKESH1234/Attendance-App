@@ -75,9 +75,7 @@
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
-            
-        </nav>
-        <?php
+            <?php
                    
                     require_once 'modals/student_register_modal.php';
                     require_once 'modals/admin_login_modal.php';
@@ -86,3 +84,5 @@
                     require_once 'modals/teacher_register_modal.php';
                     require_once 'modals/add_teacher_modal.php';
                     ?>
+        </nav>
+        
