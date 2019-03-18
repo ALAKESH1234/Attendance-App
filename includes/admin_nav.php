@@ -20,7 +20,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                    <a class="navbar-brand" href="index.php">home</a>
+                    <li><a class="navbar-brand" href="index.php">HOME</a></li>
                     <li><a href="#">About</a></li>
                         <?php
                         if(!isset($_SESSION['email'])) {
