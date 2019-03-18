@@ -15,7 +15,7 @@ print_r($sql);
     $result = $conn->query($sql);
 var_dump($result);
 if ($result!=0) {
-    $_SESSION['success']="successfully add";
+    $_SESSION['success']="successfully added";
     header('location: ../index.php');
 }
 ?>
