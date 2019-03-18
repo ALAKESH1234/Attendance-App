@@ -33,7 +33,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Contact No.</label>
-                                            <input type="password" class="form-control" name="cno" placeholder="Contact No.">
+                                            <input type="text" class="form-control" name="cno" placeholder="Contact No.">
                                         </div>
                                         <div class="modal-footer">
                                         <button type="submit" class="btn btn-primary">ADD</button>
