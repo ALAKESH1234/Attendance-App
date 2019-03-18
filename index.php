@@ -34,7 +34,7 @@ require_once 'includes/admin_nav.php';
     </div>
 
     <div class="item">
-      <img src="assets/images/2.jpg" alt="New York">
+      <img src="assets/images/3.jpg" alt="New York">
     </div>
   </div>
 
