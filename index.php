@@ -1,6 +1,7 @@
 <?php require_once 'includes/header.php';
 require_once 'bootstrap.php';
 require_once 'includes/admin_nav.php';
+
 ?>
 <div class="container">
 <!--place for error message flashing-->

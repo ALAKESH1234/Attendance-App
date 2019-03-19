@@ -5,12 +5,10 @@ require_once 'includes/admin_nav.php';
 
 ?>
 <?php
-$i= session_id;
-echo $i;
 var_dump($_SESSION);
 if($_SESSION['role']=='1')
 {
-    header('location:http://localhost/clg/index.php');
+    header('location:index.php');
     $_SESSION['error'] = 'sorry you are not an admin';
 
 }
