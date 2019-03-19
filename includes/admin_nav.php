@@ -19,17 +19,21 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+
+                    <li><a class="navbar-brand" href="index.php">HOME</a></li>
+                      <li><a href="about.php">About</a></li>
                     <li><a class="navbar-brand" href="index.php"><?php echo ucwords($_SESSION['role']). ' Home';?></a></li>
                     <li><a href="about.php">About</a></li>
                     <?php
                         if(isset($_SESSION['email'])){
-                         echo' <li><a href="logout.php">Logout</a></li>';}
+                         echo' <li><a href="logout.php">Logout</a></li>
                         ?>
                         <?php
                         if(!isset($_SESSION['email'])) {
                             echo '<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
+
                             <li><a href="#registert"data-toggle="modal">Teacher register</a></li>
                             <li><a href="#registers"data-toggle="modal">Student register</a></li>
 
@@ -55,8 +59,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">teachers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#addt"data-toggle="modal">Add</a></li>
-                                <li><a href="#">delete</a></li>
-                                <li><a href="#">edit</a></li>
+                                <li><a href="edit_teacher.php">Update</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -66,7 +69,8 @@
                             <li><a href="#">delete</a></li>
                                 <li><a href="#">edit</a></li>
                         </ul>
-                        </li>';require_once 'modals/add_teacher_modal.php';
+                        </li>';
+                        require_once 'modals/add_teacher_modal.php';
                         }
                        
                         ?>

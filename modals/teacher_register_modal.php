@@ -17,6 +17,9 @@
                                 <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
                                     <form name="teacher_register" action="actions/teacher_register_action.php" method="post" enctype="multipart/form-data">
 
+                                      <div>
+
+
 
                                         <div class="form-group">
                                             <label>Name</label>
@@ -27,6 +30,10 @@
                                             <input type="email" class="form-control" name="email" placeholder="Your Email..">
                                         </div>
                                         <div class="form-group">
+
+                                            <label>Contact No</label>
+                                            <input type="phone" name="name" class="form-control" placeholder="Your phone number...">
+
                                             <label>Contact no</label>
                                             <input type="text" class="form-control" name="cno" placeholder="Type contact number">
                                         </div>
@@ -41,9 +48,21 @@
                                         <div class="form-group">
                                             <label>Password</label>
                                             <input type="password" class="form-control" name="password" placeholder="Type Password">
+
                                         </div>
                                         
                                         <div class="form-group">
+
+                                            <label for="dept">Dept Id</label>\
+                                            <select name="deptid" class="form-control" id="dept">
+                                            <option value="cs">123</option>
+                                            <option value="el">122</option>
+                                            <option value="cs">121</option>
+                                            <option value="el">120</option>
+                                            </select>
+                                        </div>    
+                                        <button type="submit" class="btn btn-default">Submit</button>
+
                                             <label for="exampleInputPassword1">Confirm Password</label>
                                             <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
                                         </div>
