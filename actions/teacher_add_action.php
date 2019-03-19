@@ -4,7 +4,7 @@ var_dump($_POST);
 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
     
     $_email = $_POST['email'];
-    $_password = '';
+    $_password = $_POST['password'];
     $_name = $_POST['name'];
     $_deptid = $_POST['deptid'];
     $_cno = $_POST['cno'];
