@@ -18,4 +18,3 @@ if ($result!=0) {
     $_SESSION['success']="successfully added";
     header('location: ../index.php');
 }
-?>

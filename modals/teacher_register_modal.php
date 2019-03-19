@@ -12,12 +12,13 @@
         <div class="col-lg-offset-1 col-lg-10">
             <div class="row">
                 <div class="col-lg-12">
-                    
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Register</div>
+                        <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
                                     <form name="teacher_register" action="actions/teacher_register_action.php" method="post" enctype="multipart/form-data">
-
-
+                                      <div>
                                         <div class="form-group">
                                             <label>Name</label>
                                             <input type="text" name="name" class="form-control" placeholder="Your Name...">
@@ -27,41 +28,32 @@
                                             <input type="email" class="form-control" name="email" placeholder="Your Email..">
                                         </div>
                                         <div class="form-group">
-                                            <label>Contact no</label>
-                                            <input type="text" class="form-control" name="cno" placeholder="Type contact number">
+                                            <label>Contact No</label>
+                                            <input type="phone" name="cno" class="form-control" placeholder="Your phone number...">
                                         </div>
                                         <div class="form-group">
-                                        <label>Department &nbsp;</label>
-                                        <select name="deptid" size="1">
-                                        <option value="cse">Computer Science</option>
-                                        <option value="ele">Electronics</option>
-                                         <option value="mat">Mathematics</option>
-                                        </select><br>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Password</label>
-                                            <input type="password" class="form-control" name="password" placeholder="Type Password">
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Confirm Password</label>
-                                            <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
-                                        </div>
-                                    
-                                        <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary">Register</button>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <label for="dept">Department</label>\
+                                            <select name="deptid" class="form-control" id="dept">
+                                            <option value="cs">Computer Science</option>
+                                            <option value="el">Electronics</option>
+                                            <option value="cs">Physics</option>
+                                            <option value="el">Maths</option>
+                                            </select>
+                                        </div>    
+                                        <button type="submit" class="btn btn-default">Submit</button>
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
                 </div>
-            </div>       
-        </div>       
-            
-        
-    
+            </div>
+        </div>
+    </div>
       </div>
-
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

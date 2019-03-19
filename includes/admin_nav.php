@@ -62,9 +62,10 @@
                             <li><a href="#">delete</a></li>
                                 <li><a href="#">edit</a></li>
                         </ul>
-                        </li>';require_once 'modals/add_teacher_modal.php';
+                        </li>';
                         }
-                       
+                       if(isset($_SESSION['email']))
+                       echo' <li><a href="logout.php">Logout</a></li>';
                         ?>
                         
                        
@@ -73,7 +74,7 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
             <?php
-                
+                    require_once 'modals/add_teacher_modal.php';
                     require_once 'modals/student_register_modal.php';
                     require_once 'modals/admin_login_modal.php';
                     require_once 'modals/teacher_login_modal.php';

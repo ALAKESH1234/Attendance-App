@@ -2,9 +2,18 @@
 LogInCheck();
 require_once 'bootstrap.php';
 require_once 'includes/admin_nav.php';
+
 ?>
 <?php
+$i= session_id;
+echo $i;
+var_dump($_SESSION);
+if($_SESSION['role']=='1')
+{
+    header('location:http://localhost/clg/index.php');
+    $_SESSION['error'] = 'sorry you are not an admin';
 
+}
 $uid=$_GET['uid'];
 if($_SERVER["REQUEST_METHOD"]=="GET"){
 echo $uid;
@@ -37,7 +46,7 @@ $result = $conn->query($sql);
                 if($result->num_rows == 0)
                 {
                     $_SESSION['error']="nothing to show";
-                    header ('edit_teacher.php');
+                    header ('location:edit_teacher.php');
                 }
                 else{
                 while ($row=$result->fetch_assoc()) {
@@ -56,6 +65,7 @@ $result = $conn->query($sql);
                     ?>
 
 </table>
+}
 <?php
  flash();
 ?>
