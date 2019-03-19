@@ -27,8 +27,8 @@
                                             <input type="email" class="form-control" name="email" placeholder="Your Email..">
                                         </div>
                                         <div class="form-group">
-                                            <label>Cno</label>
-                                            <input type="text" class="form-control" name="contactno" placeholder="Type contact number">
+                                            <label>Contact no</label>
+                                            <input type="text" class="form-control" name="cno" placeholder="Type contact number">
                                         </div>
                                         <div class="form-group">
                                         <label>Department &nbsp;</label>
