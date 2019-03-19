@@ -18,11 +18,7 @@
                             <div class="row">
                                 <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
                                     <form name="teacher_register" action="actions/teacher_register_action.php" method="post" enctype="multipart/form-data">
-
-                                    <div>
-                                        
-                                    </div>
-
+                                      <div>
                                         <div class="form-group">
                                             <label>Name</label>
                                             <input type="text" name="name" class="form-control" placeholder="Your Name...">
