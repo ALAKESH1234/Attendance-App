@@ -19,17 +19,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-<<<<<<< HEAD
+
                     <li><a class="navbar-brand" href="index.php">HOME</a></li>
                     <li><a href="about.php">About</a></li>
-=======
-                    <li><a class="navbar-brand" href="index.php"><?php echo ucwords($_SESSION['role']). ' Home';?></a></li>
-                    <li><a href="about.php">About</a></li>
-                    <?php
-                        if(isset($_SESSION['email'])){
-                         echo' <li><a href="logout.php">Logout</a></li>';}
-                        ?>
->>>>>>> f755f7ed317ad1304ec6c154614becec1ab25182
                         <?php
                         if(!isset($_SESSION['email'])) {
                             echo '<li class="dropdown">
