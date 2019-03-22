@@ -33,7 +33,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="dept">Department</label>\
-                                            <select name="deptid" class="form-control" id="dept" value='<?php echo $row['deptid'];?>'>
+                                            <select name="deptid" class="form-control" id="dept" value='<?php echo $row['dept_name'];?>'>
                                             <option value="cs">123</option>
                                             <option value="el">234</option>
                                             <option value="cs">122</option>

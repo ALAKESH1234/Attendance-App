@@ -47,12 +47,14 @@
                             </li>';
                         }
                         
-                        if($_SESSION['role']=='admin') {
+                        if($_SESSION['role']=='admin'||!isset($_SESSION)) {
                         echo'  <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">teachers <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teachers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#addt"data-toggle="modal">Add</a></li>
                                 <li><a href="edit_teacher.php">Update</a></li>
+                                <li><a href="#delt" data-toggle="modal" >Edit One Profile</a></li>
+                               
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -74,6 +76,7 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
             <?php
+                    require_once 'modals/edit_teacher_modal.php';
                     require_once 'modals/add_teacher_modal.php';
                     require_once 'modals/student_register_modal.php';
                     require_once 'modals/admin_login_modal.php';

@@ -39,23 +39,23 @@
                                       while ($row=$result->fetch_assoc()) {
                                       
                                     if($row['COLUMN_NAME']=="password"||$row['COLUMN_NAME']=="status"){
-                                    echo '<input type="hidden" name="'. $row['COLUMN_NAME'] .'"class="form-control" placeholder="Your Name...">
+                                    echo '<input type="hidden" name="'. $row['COLUMN_NAME'] .'"class="form-control" >
                                 </div>';
                                     }
                                   elseif($row['COLUMN_NAME']=="deptname"){
                                    echo'  <label>'. $row['COLUMN_COMMENT'] .'</label>
-                                         <select name="deptid" class="form-control" id="dept">
-                                     <option value=cs>'.$row['dept_name'].'</option>.';
+                                         <select name="deptname" class="form-control" id="dept">
+                                     <option >'.$row['dept_name'].'</option>.';
                                     while ($row=$result2->fetch_assoc()) {
 
-                                        echo "<option value=cs>".$row['dept_name']."</option>.";
+                                        echo "<option >".$row['dept_name']."</option>.";
 
                                     }
                                   }
                                   else{
                                     echo '<div class="form-group">
                                       <label>'. $row['COLUMN_COMMENT'] .'</label>
-                                      <input type="text" name="'. $row['COLUMN_NAME'] .'"class="form-control" placeholder="Your Name...">
+                                      <input type="text" name="'. $row['COLUMN_NAME'] .'"class="form-control" placeholder="'. $row['COLUMN_COMMENT'] .'">
                                   </div>';
                                       }}
 

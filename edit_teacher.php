@@ -11,12 +11,13 @@ require_once 'includes/admin_nav.php';
 <?php
 var_dump($_SESSION);
 
-$uid=5;
+
 if($_SERVER["REQUEST_METHOD"]=="GET"){
    $uid=$_GET['uid'];
 echo $uid;
 require_once 'db.php';
-$sql="DELETE FROM teacher where `cno`=$uid";
+$sql="DELETE FROM `teacher` where `cno`=$uid";
+$result = $conn->query($sql);
 print_r($sql);
 }
 ?>
@@ -30,7 +31,7 @@ print_r($sql);
                     <th>Name</th>
                     <th>Email</th>
                     <th>Contact No.</th>
-                    <th>Dept Id</th>
+                    <th>Dept Name</th>
                     <th>Update Option</th>
                 </tr>
                 <?php
@@ -52,7 +53,7 @@ print_r($sql);
                     echo  "<td>".$row['name']."</td>";
                     echo "<td>".$row['email']."</td>";
                     echo "<td>".$row['cno']."</td>";
-                    echo "<td>".$row['deptid']."</td>";
+                    echo "<td>".$row['deptname']."</td>";
                     echo "<td>"."<a href='teacher_update.php?uid=".$row['cno']."' class='btn btn-primary btn-xs'><i class='fa fa-edit'>"."</i></a>"."<a href='edit_teacher.php?uid=".$row['cno']."'><button class='btn btn-danger btn-xs'  >"."<i class='fa fa-trash-o'></i>"."</button>"."</a>"."</td>";
                    
                 }}
