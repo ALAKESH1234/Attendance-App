@@ -5,7 +5,7 @@
                $result2 = $conn->query($sql);
                
 ?>
-<div class="modal fade" id="addt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="delt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -19,11 +19,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-primary">
-                        <div class="panel-heading">Add Teacher</div>
+                        <div class="panel-heading">Delete Teacher</div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
-                                    <form name="teacher_register" action="actions/teacher_add_action.php" method="post" enctype="multipart/form-data">
+                                    <form name="teacher_register" action="edit_one_teacher.php" method="post" enctype="multipart/form-data">
 
 
                                         <div class="form-group">
@@ -50,7 +50,7 @@
                                             <input type="text" class="form-control" name="cno" placeholder="Contact No.">
                                         </div>
                                         <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary">ADD</button>
+                                        <button type="submit" class="btn btn-primary">DELETE</button>
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                          </div>
                                     </form>

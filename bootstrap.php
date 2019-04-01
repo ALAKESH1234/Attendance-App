@@ -6,7 +6,7 @@
  * libraries
  */
 //set error reporting to zero
-error_reporting(0);
+//error_reporting(0);
 
 // Load Config
 require_once 'config/config.php';

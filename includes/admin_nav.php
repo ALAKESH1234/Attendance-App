@@ -19,12 +19,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a class="navbar-brand" href="index.php"><?php echo ucwords($_SESSION['role']). ' Home';?></a></li>
+
+                    <li><a class="navbar-brand" href="index.php">HOME</a></li>
                     <li><a href="about.php">About</a></li>
-                    <?php
-                        if(isset($_SESSION['email'])){
-                         echo' <li><a href="logout.php">Logout</a></li>';}
-                        ?>
                         <?php
                         if(!isset($_SESSION['email'])) {
                             echo '<li class="dropdown">
@@ -49,26 +46,28 @@
                             </ul>
                             </li>';
                         }
-                        
-                        if($_SESSION['role']=='admin') {
+                        if(isset($_SESSION['role'])){
+                        if($_SESSION['role']=='admin' ){
                         echo'  <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">teachers <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teachers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#addt"data-toggle="modal">Add</a></li>
-                                <li><a href="#">delete</a></li>
-                                <li><a href="#">edit</a></li>
+                                <li><a href="edit_teacher.php">Update</a></li>
+                                <li><a href="#delt" data-toggle="modal" >Edit One Profile</a></li>
+                               
                             </ul>
                         </li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">department <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Add</a></li>
-                            <li><a href="#">delete</a></li>
-                                <li><a href="#">edit</a></li>
+                            <li><a href="#addd" data-toggle="modal">Add</a></li>
+                            
+                                <li><a href="edit_department.php">edit</a></li>
                         </ul>
-                        </li>';require_once 'modals/add_teacher_modal.php';
-                        }
-                       
+                        </li>';
+                        }}
+                       if(isset($_SESSION['email']))
+                       echo' <li><a href="logout.php">Logout</a></li>';
                         ?>
                         
                        
@@ -77,7 +76,9 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
             <?php
-                
+                    require_once 'modals/add_department_modal.php';
+                    require_once 'modals/edit_teacher_modal.php';
+                    require_once 'modals/add_teacher_modal.php';
                     require_once 'modals/student_register_modal.php';
                     require_once 'modals/admin_login_modal.php';
                     require_once 'modals/teacher_login_modal.php';

@@ -3,7 +3,7 @@ require_once 'bootstrap.php';
 LogInCheck();
 //unset session
 unset($_SESSION['email']);
-unset($_SESSION['role']);
+$_SESSION['role']='1';
 
 //redirect to log in page
 $_SESSION['success'] = 'you have successfully logged out ';

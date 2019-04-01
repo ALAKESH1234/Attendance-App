@@ -12,3 +12,11 @@ function LogInCheck()
         header('location: http://localhost/clg/');
     }
 }
+function AdminCheck()
+{
+   //if user is not logged in through them to index
+    if($_SESSION['role']!='admin'){
+        $_SESSION['error'] = 'you are not an admin';
+        header('location: http://localhost/clg/');
+    }
+}
