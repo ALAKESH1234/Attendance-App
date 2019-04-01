@@ -46,8 +46,8 @@
                             </ul>
                             </li>';
                         }
-                        
-                        if($_SESSION['role']=='admin'||!isset($_SESSION)) {
+                        if(isset($_SESSION['role'])){
+                        if($_SESSION['role']=='admin' ){
                         echo'  <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teachers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -60,12 +60,12 @@
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">department <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Add</a></li>
-                            <li><a href="#">delete</a></li>
-                                <li><a href="#">edit</a></li>
+                            <li><a href="#addd" data-toggle="modal">Add</a></li>
+                            
+                                <li><a href="edit_department.php">edit</a></li>
                         </ul>
                         </li>';
-                        }
+                        }}
                        if(isset($_SESSION['email']))
                        echo' <li><a href="logout.php">Logout</a></li>';
                         ?>
@@ -76,6 +76,7 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
             <?php
+                    require_once 'modals/add_department_modal.php';
                     require_once 'modals/edit_teacher_modal.php';
                     require_once 'modals/add_teacher_modal.php';
                     require_once 'modals/student_register_modal.php';

@@ -10,11 +10,27 @@ $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
     $_cno = $_POST['cno'];
     $_status = '0';
     require_once '../db.php';
-$sql = "INSERT INTO `teacher`(`email`,`name`,`cno`,`deptname`,`password`,`status`) VALUES('" . $_email . "','" . $_name . "','" . $_cno . "','" . $_deptname . "','" . $_password . "','" . $_status . "')";
+    $sql="SELECT * FROM `department` WHERE `dept_name`='".$_POST['deptname']."'";
+    $result = $conn->query($sql);
+    $row=$result->fetch_assoc();
+    var_dump($row);
+    echo $sql;
+    $_deptid = $row['deptid'];
+    echo $_deptid;
+$sql = "INSERT INTO `teacher`(`email`,`name`,`cno`,`deptid`,`password`,`status`) VALUES('" . $_email . "','" . $_name . "','" . $_cno . "','" . $_deptid . "','" . $_password . "','" . $_status . "')";
 print_r($sql);
     $result = $conn->query($sql);
 var_dump($result);
-if($result==true){
-$_SESSION['success'] = 'successfully registered';
+if($result == true)
+{
+   
+    $_SESSION['success'] = 'successfully added';
+    header('location: ../edit_teacher.php');
+    }
+    elseif($result != true)
+    {
+        $_SESSION['error'] = 'somting went Wrong ';
+        header('location: ../edit_teacher.php');
+    }
 
-}
+?>

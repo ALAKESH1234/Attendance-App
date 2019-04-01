@@ -2,10 +2,6 @@
 require_once 'includes/header.php';
 flash();
 LogInCheck();
-
-require_once 'bootstrap.php';
-AdminCheck();
-require_once 'includes/admin_nav.php';
 require_once 'db.php';
 $sql="SELECT * FROM `teacher`  where `name`='".$_POST['name']."' and`deptname`='".$_POST['deptname']."'and`cno`='".$_POST['cno']."'";
  $result = $conn->query($sql);
@@ -14,6 +10,10 @@ if($result->num_rows == 0)
                     $_SESSION['error']="no one matches the description";
                     header ('location:index.php');
                 }
+require_once 'bootstrap.php';
+AdminCheck();
+require_once 'includes/admin_nav.php';
+
 ?>
 <?php
 
@@ -21,11 +21,9 @@ if($result->num_rows == 0)
 
 if($_SERVER["REQUEST_METHOD"]=="GET"){
    $uid=$_GET['uid'];
-echo $uid;
 require_once 'db.php';
 $sql="DELETE FROM `teacher` where `cno`=$uid";
 $result = $conn->query($sql);
-print_r($sql);
 }
 ?>
 
@@ -47,9 +45,9 @@ print_r($sql);
               
                $sql="SELECT * FROM `teacher`  where `name`='".$_POST['name']."' and`deptname`='".$_POST['deptname']."'and`cno`='".$_POST['cno']."'";
                 $result = $conn->query($sql);
-                echo $sql;
-                var_dump($_POST);
-                var_dump($result);
+                
+                
+                
                 if($result->num_rows == 0)
                 {
                    

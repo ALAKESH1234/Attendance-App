@@ -8,9 +8,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     //var_dump($_POST);
     $_email = $_POST['email'];
     $_password = $_POST['password'];
+    $_status='1';
     //connect db
     require_once '../db.php';
-    $sql = "SELECT * FROM  `teacher` WHERE `email`='" . $_email . "' AND `password`='" . $_password . "'";
+    $sql = "SELECT * FROM  `teacher` WHERE `email`='" . $_email . "' AND `password`='" . $_password . "' and `status`='".$_status."'";
     //$sql = "SELECT * FROM  `department` WHERE `dept_id`='" . $_id . "'";
     //print_r($sql);
     $result = $conn->query($sql);
